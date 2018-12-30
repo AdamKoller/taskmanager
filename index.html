@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='main.css'>
+    <link rel='stylesheet' href='reset.css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gruppo" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+      <header>
+        <div class='top'>
+          <div class='logo'>
+            <h3>Task Manager</h3>
+            <p>Get It Done</p>
+          </div>
+        </div>
+      </header>
+
+      <section class='content-area'>
+        <div class='container'>
+          <div class='add-task-container'>
+            <form>
+              <div class='form-group'>
+                <input type='text' name='title' placeholder="Enter a task" autocomplete="off" id='newtask'> <!-- -->
+              </div>
+              <div id='add'>  <!-- IMPORTANT -->
+                <button type='button'>Add</button>
+              </div>
+            </form>
+          </div>
+
+          <div class='list-container'>
+            <!-- incompleted tasks -->
+            <ul class='todo' id='todo'></ul>
+            <!-- completed tasks -->
+            <ul class='todo' id='completed'></ul>
+          </div>
+        </div>
+      </section>
+
+    <script src='./main.js'></script>
+
+  </body>
+</html>

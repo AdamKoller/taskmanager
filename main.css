@@ -1,0 +1,203 @@
+
+/*          header                   */
+header {
+  background: ('./projects/htmlcss/todo-app/img/background.jpg') center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  color: white;
+  margin: 0 0 10px 0;
+}
+ header .top {
+  background: rgba(97,215,163,0.5);
+  padding:15px 15px;
+  text-align: right;
+  position: relative;
+  height:160px;
+}
+ header .logo h3 {
+  font-family: 'Gruppo';
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+header .logo p {
+  font-size: 15px;
+  margin: 10px 0 0 0;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+/*            new task task form            */
+.content-area .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display:block;
+  padding: 0 15px;
+}
+.content-area .container .add-task-container form {
+  width:100%;
+  background:#61D7A3;
+  display:block;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  align:center;
+}
+.add-task-container form .form-group {
+    width: 100%;
+    height: 55px;
+}
+.add-task-container form input[type='text']  {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  background:rgba(255,255,255,.2);
+  border:0px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+  color:white;
+}
+.add-task-container form input[type='text'] &:focus {
+  border:none;
+  outline: none;
+}
+.add-task-container form ::placeholder {
+  color:#fff;
+  font-size: 24px;
+  opacity: .6;
+  padding: 0 0 20px 5px;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+}
+.add-task-container #add button{
+  background: #224571;
+  border: none;
+  border-radius: 8px;
+  color: #F3FFFA;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-family: 'Gruppo';
+}
+/*                task list area              */
+.content-area .container .list-container {
+  width:100%;
+  float: left;
+  padding: 16px;
+}
+.todo {
+  width:100%;
+  float:left;
+}
+.todo li{
+  width:100%;
+  float:left;
+  min-height: 50px;
+  background:  #61D7A3;
+  border-radius: 8px;
+  margin: 0 0 10px 0;
+  position: relative;
+  padding: 12px 100px 12px 10px;
+  font-size:26px;
+  font-weight: lighter;
+  color:white;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+}
+.todo li:last-of-type {
+  margin:0;
+}
+.todo li .buttons {
+  width: 100px;
+  height: 56px;
+  position: absolute;
+  top:-5px;
+  right: 0;
+}
+ul.todo .buttons button {
+  width: 50px;
+  height: 56px;
+  float: left;
+  background: none;
+  border:0px;
+  box-shadow:none;
+  outline: none;
+  position: relative;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  -o-appearance:none;
+  appearance:none;
+}
+ul.todo .buttons button:last-of-type:before {
+  content: '';
+  width: 2px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left:0;
+  background: lightgrey;
+}
+.todo li .buttons .remove .fas {
+  font-size: 24px;
+  color: lightgrey;
+  cursor: pointer;
+}
+.todo li .buttons .remove:hover .fas{
+  color:red;
+  transition: 0.2s ease-in-out;
+}
+.todo li .buttons .complete .fas {
+  font-size: 24px;
+  color: lightgrey;
+  cursor: pointer;
+}
+#completed li .buttons .complete .fas {
+  color:gold;
+}
+:not(#completed) li .buttons .complete:hover .fas{
+  color: gold;
+  transition: .2s ease-in-out;
+}
+#completed {
+  padding: 60px 0 0 0;
+  position: relative;
+}
+ul#completed:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: grey;
+  position: absolute;
+  top: 30px;
+  left:50%;
+  margin:0 0 0 -75px;
+}
+ul#completed:empty:after {
+  content:'No completed tasks';
+  width:100%;
+  display:block;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+ul#todo:empty:after {
+  content:'No current tasks';
+  width:100%;
+  margin:15px 0 0 0;
+  display:block;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
