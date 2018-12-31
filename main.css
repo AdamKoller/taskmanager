@@ -1,7 +1,7 @@
 
 /*          header                   */
 header {
-  background: ('./projects/htmlcss/todo-app/img/background.jpg') center center;
+  background: url('./img/background.jpg') center center;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -9,7 +9,7 @@ header {
   margin: 0 0 10px 0;
 }
  header .top {
-  background: rgba(97,215,163,0.5);
+  background: rgba(97,215,163,0.4);
   padding:15px 15px;
   text-align: right;
   position: relative;
